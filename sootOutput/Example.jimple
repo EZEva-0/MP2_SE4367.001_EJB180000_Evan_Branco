@@ -1,0 +1,57 @@
+public class Example extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        Example r0;
+
+        r0 := @this: Example;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    static Animal neverCalled()
+    {
+        Fish $r0;
+
+        $r0 = new Fish;
+
+        specialinvoke $r0.<Fish: void <init>()>();
+
+        return $r0;
+    }
+
+    static Animal selectAnimal()
+    {
+        Cat $r0;
+
+        $r0 = new Cat;
+
+        specialinvoke $r0.<Cat: void <init>()>();
+
+        return $r0;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] r0;
+        Animal r1;
+        java.io.PrintStream $r2;
+
+        r0 := @parameter0: java.lang.String[];
+
+        $r2 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r2.<java.io.PrintStream: void println(java.lang.String)>("calling selectAnimal");
+
+        r1 = staticinvoke <Example: Animal selectAnimal()>();
+
+        virtualinvoke $r2.<java.io.PrintStream: void println(java.lang.String)>("calling saySomething");
+
+        virtualinvoke r1.<Animal: void saySomething()>();
+
+        return;
+    }
+}
