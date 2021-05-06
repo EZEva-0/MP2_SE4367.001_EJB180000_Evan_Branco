@@ -1,6 +1,7 @@
 import java.io.File;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 import soot.*;
@@ -30,7 +31,7 @@ public class TestSootLoggingHeap extends BodyTransformer {
 
 		//output Jimple
 		// -```````````````	
-			ptions.v().set_output_format(1);
+			//Options.v().set_output_format(1);
 
 //		//set classpath
 	    String javapath = System.getProperty("java.class.path");

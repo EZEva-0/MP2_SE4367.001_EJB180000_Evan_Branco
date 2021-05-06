@@ -44,8 +44,19 @@ public class TestSootCallGraph extends SceneTransformer {
 
 
 	    //enable call graph
-	    //enableCHACallGraph();
-	   enableSparkCallGraph();
+	    
+	    //note, modified slightly to print execution time in nano seconds
+	    long startTimeCHA = System.nanoTime();
+	    enableCHACallGraph();
+	    long endTimeCHA = System.nanoTime();
+	    long durationInNanoCHA = (endTimeCHA-startTimeCHA);
+	    System.out.println("Execution time of call enableCHACallGraph(); in Nanoseconds: "+durationInNanoCHA);
+	    
+	    long startTimeSpark = System.nanoTime();
+	    //enableSparkCallGraph();
+	    long endTimeSpark = System.nanoTime();
+	    long durationInNanoSpark = (endTimeSpark-startTimeSpark);
+	    System.out.println("Execution time of call enableSparkCallGraph(); in Nanoseconds: "+durationInNanoSpark);
 
             //start working
 	    PackManager.v().runPacks();

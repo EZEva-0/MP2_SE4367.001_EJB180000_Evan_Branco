@@ -7,5 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Eva/Desktop/Programming/EclipseWorkSpace/a1/lib/soot-3.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Eva/Desktop/Programming/EclipseWorkSpace/a1/lib/android.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
